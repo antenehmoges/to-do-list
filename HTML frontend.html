@@ -3,18 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>To-Do List App</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Hierarchical To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>📝 To-Do List</h1>
-    <div class="input-group">
-      <input type="text" id="taskInput" placeholder="Add a new task" />
-      <button id="addBtn" onclick="addTask()">Add</button>
-    </div>
-    <ul id="taskList"></ul>
-  </div>
+    <h1>🗂️ Foldered To-Do List</h1>
+
+    <!-- Folder Input -->
+<div class="input-group">
+  <input type="text" id="folderInput" placeholder="Create a new folder (e.g., Chores)">
+  <button onclick="createFolder()">Add Folder</button>
+</div>
+    <!-- Folder Selector -->
+   <h3>Folders</h3>
+<ul id="folderList"></ul>
+
+    <!-- Task Input -->
+ <div class="input-group">
+  <input type="text" id="taskInput" placeholder="Add a task to selected folder">
+  <button onclick="addTask()">Add Task</button>
+</div>
+
+<ul id="taskList"></ul>
 
   <script src="java.js"></script>
 </body>
